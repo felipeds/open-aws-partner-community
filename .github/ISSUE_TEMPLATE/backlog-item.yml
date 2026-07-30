@@ -1,0 +1,46 @@
+name: "Backlog item"
+description: "Propose a candidate piece of non-differentiating shared tooling."
+title: "[Backlog] <short problem statement>"
+labels: ["backlog", "idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The backlog is heat-mapped by 👍 reactions. A high heat map ranks an item;
+        it never auto-promotes. An item becomes a working group only when two
+        partners commit named leads (§7.12, §7.3).
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What operational pain does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: non-differentiating
+    attributes:
+      label: Why is this non-differentiating?
+      description: Explain why this is safe to build in the open and shared across partners (see anti-goals, §5).
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Expected reusable output
+      description: What would the shared deliverable be (agent, connector, validation tool, reference workflow, pattern)?
+    validations:
+      required: true
+  - type: input
+    id: partners
+    attributes:
+      label: Which partners feel this pain?
+      description: List partner companies that share this problem.
+    validations:
+      required: true
+  - type: checkboxes
+    id: anti-goals
+    attributes:
+      label: Anti-goals attestation
+      options:
+        - label: This contains no customer data, opportunity/pipeline data, or differentiated/customer-facing IP.
+          required: true

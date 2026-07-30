@@ -1,0 +1,34 @@
+name: "RFC (governance / lazy consensus)"
+description: "Propose a governance or process change under lazy consensus."
+title: "[RFC] <proposal>"
+labels: ["rfc", "lazy-consensus"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Lazy consensus (§7.1): this RFC is **approved automatically after 5 business
+        days** unless an objection is raised. An objection moves the item to the next
+        bi-weekly council call. Maintainers apply the `objection` label to pause the timer.
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+    validations:
+      required: true
+  - type: input
+    id: sections
+    attributes:
+      label: Reference sections affected
+      description: Which §sections of the community reference would change?
+  - type: input
+    id: deadline
+    attributes:
+      label: Lazy-consensus deadline (5 business days from opening)
+    validations:
+      required: true

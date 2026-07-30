@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Community reference (single source of truth)
+    url: https://github.com/OWNER-ORG/REPO/blob/main/reference/open_aws_partner_community_reference.md
+    about: Read the governance model, vision, and anti-goals before opening an issue.

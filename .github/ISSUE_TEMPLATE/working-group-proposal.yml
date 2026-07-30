@@ -1,0 +1,51 @@
+name: "Working group proposal"
+description: "Propose forming a working group. Requires two committed leads from two different partner companies."
+title: "[WG] <working group name>"
+labels: ["working-group", "proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A working group forms **only** when exactly two partners commit named leads,
+        one per partner company (§7.6). The two leads hold merge authority for the
+        group's folder (§7.3). Other partners may join as contributors.
+  - type: input
+    id: name
+    attributes:
+      label: Working group name
+    validations:
+      required: true
+  - type: input
+    id: backlog-link
+    attributes:
+      label: Originating backlog item
+      description: Link to the backlog issue this graduates from.
+    validations:
+      required: true
+  - type: input
+    id: lead-1
+    attributes:
+      label: Lead 1 (name — partner company — GitHub handle)
+    validations:
+      required: true
+  - type: input
+    id: lead-2
+    attributes:
+      label: Lead 2 (name — DIFFERENT partner company — GitHub handle)
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and expected reusable output
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Formation rules
+      options:
+        - label: The two leads are from two different partner companies.
+          required: true
+        - label: The scope is non-differentiating and complies with the anti-goals (§5).
+          required: true
