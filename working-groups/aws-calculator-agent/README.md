@@ -15,7 +15,7 @@ company** (§7.6). Until then this group is *forming*.
 
 | Role | Name | Partner company | GitHub handle |
 |------|------|-----------------|---------------|
-| Lead 1 | _TBD_ | _TBD_ | _TBD_ |
+| Lead 1 | _TBD_ | CI&T | [@ciandt-palma](https://github.com/ciandt-palma) |
 | Lead 2 | _TBD_ | _different partner_ | _TBD_ |
 
 > Update [`CODEOWNERS`](CODEOWNERS) in this folder with the two leads' GitHub team

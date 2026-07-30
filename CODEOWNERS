@@ -22,5 +22,7 @@
 /chapters/us/          @OWNER-ORG/us-council
 
 # --- Working groups: two leads from two different partner companies ---
-# AWS Calculator Agent — leads TBD (must be one per partner company)
-/working-groups/aws-calculator-agent/   @OWNER-ORG/wg-aws-calculator-agent-leads
+# AWS Calculator Agent — @ciandt-palma is lead 1 (CI&T). A second lead from a
+# DIFFERENT partner company is still required for the two-key rule (§7.3, §7.6);
+# add their handle here once confirmed.
+/working-groups/aws-calculator-agent/   @ciandt-palma

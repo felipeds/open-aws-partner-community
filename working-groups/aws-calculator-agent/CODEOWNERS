@@ -1,4 +1,9 @@
 # Merge authority for the AWS Calculator Agent working group (§7.3).
 # Exactly two leads, from two DIFFERENT partner companies.
-# Replace with the real team once the two leads are confirmed.
-*   @OWNER-ORG/wg-aws-calculator-agent-leads
+#
+# NOTE: GitHub only enforces the CODEOWNERS file at the repo root (or /.github,
+# /docs). This nested file is documentation for the working group; the effective
+# owner rule for this folder lives in the root /CODEOWNERS.
+#
+# Lead 1: @ciandt-palma (CI&T). Lead 2 from a different partner company: TBD.
+*   @ciandt-palma
