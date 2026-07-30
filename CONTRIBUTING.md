@@ -39,9 +39,10 @@ Every pull request attests to this in the PR template.
    open a [working-group proposal](.github/ISSUE_TEMPLATE/working-group-proposal.yml).
    The working group gets a folder under [`working-groups/`](working-groups/) with its
    own `CODEOWNERS`.
-3. **Code by PR.** Work in the working group's folder. Merges require review from a
-   code owner, and a required check verifies the two approvals come from two
-   **different** partner companies (the two-key rule, §7.3).
+3. **Code by PR.** Work in the working group's folder. Merges require **one** approving
+   review from a code owner of that folder (§7.3). Because each folder has two leads
+   from two different partner companies, there are always at least two eligible
+   approvers — but only one approval is needed to merge.
 4. **Governance changes by RFC.** Non-code decisions go through an
    [RFC](.github/ISSUE_TEMPLATE/rfc.yml) under lazy consensus: approved automatically
    after 5 business days unless an objection is raised (§7.1).

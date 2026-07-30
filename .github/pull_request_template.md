@@ -1,4 +1,4 @@
-<!-- Reference §5 (anti-goals), §6 (license/DCO), §7.3 (two-key rule) -->
+<!-- Reference §5 (anti-goals), §6 (license/DCO), §7.3 (merge authority) -->
 
 ## What and why
 
@@ -17,8 +17,8 @@ Closes #
 - [ ] **DCO:** every commit is signed off (`git commit -s`) under the Developer Certificate of Origin.
 - [ ] **License:** I agree this contribution is licensed under the MIT License.
 
-## Two-key rule
+## Merge authority (§7.3)
 
-Merge requires approval from a code owner of the touched folder, **and** a required
-check verifies the two approvals come from two different partner companies (§7.3).
-Do not self-merge.
+Merge requires **one** approving review from a code owner of the touched folder. Each
+folder has two leads from two different partner companies, so there are always at least
+two eligible approvers — but only one approval is needed. Do not self-merge.

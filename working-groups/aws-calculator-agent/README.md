@@ -37,7 +37,7 @@ company** (§7.6). Until then this group is *forming*.
 ## How to contribute
 
 Open a PR against this folder. All commits require a DCO sign-off (`git commit -s`);
-merges require the two-key cross-company approval (§7.3). See
+merges require **one** approving review from a code owner of this folder (§7.3). See
 [CONTRIBUTING.md](../../CONTRIBUTING.md).
 
 See [`docs/charter.md`](docs/charter.md) for the working-group charter.

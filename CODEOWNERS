@@ -1,10 +1,10 @@
 # CODEOWNERS — path-scoped merge authority (reference §7.3, §7.10)
 #
 # Each working-group folder is owned by exactly TWO leads, one from each of two
-# DIFFERENT partner companies. CODEOWNERS enforces "a code owner must approve";
-# the cross-company constraint is additionally enforced by a required GitHub
-# Actions check (see .github/workflows/) because CODEOWNERS alone cannot verify
-# that two approvers belong to different partner teams.
+# DIFFERENT partner companies, so every folder has at least two eligible code-owner
+# approvers. Only ONE approving review is required to merge (§7.3): the two leads
+# share standing merge authority for redundancy; they are not two sign-offs demanded
+# per pull request.
 #
 # Replace the @org/team placeholders below with real GitHub teams once the org
 # and per-partner teams exist. Every contributor belongs to exactly one partner

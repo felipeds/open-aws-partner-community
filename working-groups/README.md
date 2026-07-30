@@ -7,8 +7,9 @@ center of the community — the building work (reference §7.7).
 
 - A working group forms **only** when two partners commit named leads, one per company.
 - Each group has **exactly two leads**, from **two different** partner companies. They
-  hold merge authority for the folder via `CODEOWNERS`; a required check enforces that
-  the two approvals come from different partner companies.
+  share merge authority for the folder via `CODEOWNERS`, so there are always at least
+  two eligible approvers — but only **one** code-owner approval is required to merge a
+  PR. The two leads are redundancy, not a two-sign-off requirement.
 - Open contribution is preserved — any partner may contribute by PR; only the two leads
   approve and merge.
 - A group graduates to its own repository only when its release cadence requires it.

@@ -30,8 +30,10 @@ commercial terms, and differentiated IP fully separate.
 - **Working groups form on commitment, not on votes.** An item becomes a working group
   only when **two partners commit named leads, one per company** (§7.6). See
   [`working-groups/`](working-groups/).
-- **Two-key merges.** Every working-group folder is protected by `CODEOWNERS` plus a
-  required check that the two approvals come from **different** partner companies (§7.3).
+- **Shared merge authority (§7.3).** Every working-group folder is owned by two leads
+  from two different partner companies via `CODEOWNERS`, so there are always at least
+  two eligible approvers — but only **one** code-owner approval is required to merge.
+  The two leads provide redundancy, not a two-sign-off requirement.
 - **Lazy consensus.** RFCs auto-approve after 5 business days unless an objection is raised (§7.1).
 - **License & contribution.** [MIT](LICENSE) + [DCO](CONTRIBUTING.md) sign-off on every commit.
 

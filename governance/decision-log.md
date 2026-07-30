@@ -18,3 +18,11 @@ file is the quick index and is updated whenever a decision is ratified.
   resolved and recorded here.
 - **Working-group leads for AWS Calculator Agent.** Two leads from two different
   partner companies are required before the group is formally active (§7.6).
+- **Approval model clarified to single approval (pending ratification).** The intended
+  rule is: two (or more) code owners from different partner companies are configured as
+  eligible approvers, but **only one** approving review is required to merge (reference
+  §7.3, now clarified; branch protection set to 1 required approval). This supersedes
+  the tooling proposal's "required approvals = 2" strictness option and Fabiano Barros's
+  v1.1 cross-company GitHub Actions check. Because that check was approved by lazy
+  consensus, this reversal should be confirmed via an RFC / council before it is treated
+  as settled governance.

@@ -107,6 +107,8 @@ Each founding partner names one primary council member and one alternate. The al
 
 Every working group has **exactly two working group leads with merge rights, one from each of two different partner companies.** No more than two leads per working group. No single partner is the sole merge authority for any working group.
 
+**How many approvals a pull request needs: one.** Having two leads from two different partner companies means every working-group folder always has **at least two eligible code-owner approvers**, so a merge is never blocked on one person's availability. It does *not* mean a PR needs two approvals — a single approving review from either lead is enough to merge. The "two keys" describe the two partners who *share* standing merge authority over the folder, not two sign-offs demanded per pull request. (This clarifies §7.3 against the stricter "required approvals = 2" option floated in the GitHub-tooling proposal, which is not adopted.)
+
 A working group does not form until both leads are committed. If a working group falls below this requirement during its life (a lead steps away), it is flagged as at-risk and must restore a second lead from a different partner within 30 days, or be moved to archived status (see §7.4).
 
 Open contribution is preserved: anyone may submit code through the open-source contribution flow. Other partners may join the working group as contributors, reviewers, testers, or adopters at any time. Only the two working group leads may merge.
