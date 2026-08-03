@@ -1,40 +1,108 @@
 name: "Backlog item"
 description: "Propose a candidate piece of non-differentiating shared tooling."
-title: "[Backlog] <short problem statement>"
+title: "[Backlog] <the problem, in plain language>"
 labels: ["backlog", "idea"]
 body:
   - type: markdown
     attributes:
       value: |
-        The backlog is heat-mapped by 👍 reactions. A high heat map ranks an item;
-        it never auto-promotes. An item becomes a working group only when two
-        partners commit named leads (§7.12, §7.3).
+        **Describe a problem, not a solution, and answer only from your own experience.**
+
+        You do not need to know whether other partners share this pain — that is what
+        the 👍 heat map is for (§7.12). Fill this in from what your own team hits, post
+        it, and let the community signal the rest.
+
+        A high heat map ranks an item; it never auto-promotes it. An item becomes a
+        working group only when two partners commit named leads, one per company
+        (§7.3, §7.6).
   - type: textarea
     id: problem
     attributes:
       label: Problem
-      description: What operational pain does this address?
+      description: >-
+        What operational pain does your team hit? Describe a concrete recent instance
+        rather than an abstract category — specifics are what let others recognise
+        their own version of the problem.
+      placeholder: |
+        Every time we scope a new workload we rebuild a throwaway spreadsheet to turn
+        the architecture into an AWS cost estimate. Last month we did this three times,
+        each from scratch, and two of them disagreed on the same EC2 assumptions.
     validations:
       required: true
   - type: textarea
-    id: non-differentiating
+    id: today
     attributes:
-      label: Why is this non-differentiating?
-      description: Explain why this is safe to build in the open and shared across partners (see anti-goals, §5).
+      label: How do you handle this today?
+      description: >-
+        Manual process, internal script, spreadsheet, nothing at all? Rough cost in
+        time or rework is useful if you have it. This is the strongest evidence that
+        the pain is real.
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does your team hit this?
+      options:
+        - "Continuously — it is part of our normal week"
+        - "Monthly-ish"
+        - "A few times a year, but painful each time"
+        - "Rarely, but it blocks us hard when it happens"
+    validations:
+      required: true
+  - type: dropdown
+    id: output-type
+    attributes:
+      label: What kind of reusable output would solve it?
+      options:
+        - "Agent"
+        - "Connector / integration"
+        - "Validation or checking tool"
+        - "Reference workflow"
+        - "Pattern or documented practice"
+        - "Not sure yet"
     validations:
       required: true
   - type: textarea
     id: output
     attributes:
-      label: Expected reusable output
-      description: What would the shared deliverable be (agent, connector, validation tool, reference workflow, pattern)?
+      label: What would that output do?
+      description: >-
+        One or two sentences on the shared deliverable. A rough sketch is fine — the
+        working group refines it. Skip the implementation.
     validations:
       required: true
-  - type: input
-    id: partners
+  - type: checkboxes
+    id: non-differentiating
     attributes:
-      label: Which partners feel this pain?
-      description: List partner companies that share this problem.
+      label: Non-differentiating self-check
+      description: >-
+        Tick what applies. **Leaving a box unticked does not block this item** — it just
+        flags the trade-off for triage. See the anti-goals (§5).
+      options:
+        - label: "I would be comfortable if a competing partner used this exact tool."
+        - label: "This is internal operational plumbing, not something a customer sees."
+        - label: "Every partner solving this separately is duplicated, throwaway effort."
+        - label: "Nobody loses an advantage if all partners have this."
+  - type: input
+    id: prior-art
+    attributes:
+      label: Prior art
+      description: >-
+        Optional. Anything that already partly solves this — an AWS native feature, an
+        open-source project, or another backlog item or working group here.
+  - type: dropdown
+    id: involvement
+    attributes:
+      label: Would you want to be involved if this became a working group?
+      description: >-
+        No wrong answer. Raising a good problem is a contribution on its own — but a
+        group needs two named leads from two companies (§7.6), so saying so early helps.
+      options:
+        - "I would co-lead it for my company"
+        - "I would contribute — build, review, or test"
+        - "I would use the output and give feedback"
+        - "I am just raising the problem"
     validations:
       required: true
   - type: checkboxes
