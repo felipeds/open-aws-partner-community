@@ -39,9 +39,10 @@ async def lifespan(app: FastAPI):
     yield
 
 app = FastAPI(title="CoE AWS Agents", lifespan=lifespan)
+CORS_ORIGINS = os.getenv("CORS_ORIGINS", "*").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=CORS_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -195,7 +196,9 @@ GENERATED_DIR.mkdir(exist_ok=True)
 
 @app.get("/api/download/{filename}")
 async def download_file(filename: str, user: AuthUser = Depends(verify_token)):
-    filepath = GENERATED_DIR / filename
+    filepath = (GENERATED_DIR / filename).resolve()
+    if not filepath.is_relative_to(GENERATED_DIR.resolve()):
+        raise HTTPException(status_code=403, detail="Access denied")
     if not filepath.exists():
         raise HTTPException(status_code=404, detail="File not found")
     return FileResponse(str(filepath), filename=filename)
